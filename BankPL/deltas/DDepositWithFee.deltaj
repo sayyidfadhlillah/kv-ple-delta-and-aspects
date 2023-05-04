@@ -1,0 +1,15 @@
+delta DDepositWithFee requires DAccountFees {
+
+	modifies at.jku.kv.ple.Account {
+	
+		modifies depositBalance(Double incBalance) {
+			
+			if(incBalance < fees){
+				System.out.println("Operation is cancelled. You need to deposit more than the fees. Current fee is "+ String.valueOf(fees));
+			} else {
+				original(incBalance);
+				balance -= fees;
+			}
+		}
+	}
+}

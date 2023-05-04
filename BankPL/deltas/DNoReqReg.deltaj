@@ -1,0 +1,15 @@
+delta DNoReqReg requires DNewBank {
+	modifies at.jku.kv.ple.Bank {
+		
+		adds void registerAccount(Account acc) {
+				
+			String accId = acc.getAccountId();
+			
+			if(customersList.containsKey(accId)) {
+				System.out.println("This account already exist, updating the information instead");
+				
+			}
+			saveAccountInformation(acc);
+		}
+	}
+}

@@ -1,0 +1,18 @@
+ configuration delta "DDepositWithFee"
+	dialect <http://www.emftext.org/java>
+		requires <DAccountFees.decore>
+		modifies <at/jku/kv/ple/Account.java>
+		{
+	modifyStatementListContainer(<method:at.jku.kv.ple.Account.depositBalance(Double)>, "void depositBalance(Double incBalance) {
+			
+			if(incBalance < fees){
+				System.out.println(\"Operation is cancelled. You need to deposit more than the fees. Current fee is \"+ String.valueOf(fees));
+			} else {
+	depositBalance$DDepositWithFee(incBalance);
+				balance -= fees;
+			}
+				
+			}
+", "DDepositWithFee", true);
+	}
+	

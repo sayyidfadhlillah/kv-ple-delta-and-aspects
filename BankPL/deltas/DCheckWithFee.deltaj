@@ -1,0 +1,20 @@
+delta DCheckWithFee requires DAccountFees {
+
+	modifies at.jku.kv.ple.Account {
+	
+		modifies checkBalance() {
+			
+			if(balance <= fees){
+				System.out.println("Operation is cancelled. Your account does not have enough balance to pay the fee. Current fee is "+ String.valueOf(fees));
+			} else {
+				balance -= fees;
+				System.out.println("Your balance is: " + String.valueOf(this.balance));
+			}
+		}
+		
+		modifies getBalance(){
+			return balance;
+		}
+	} 
+
+}

@@ -1,0 +1,7 @@
+delta DNegEval requires DNeg, DExpEval{
+	modifies at.jku.kv.ple.Neg {
+		adds public int eval(){
+			return - exp.eval();
+		}
+	}
+}

@@ -1,0 +1,25 @@
+ configuration delta "DRegWithDep"
+	dialect <http://www.emftext.org/java>
+		requires <DNewBank.decore>
+		modifies <at/jku/kv/ple/Bank.java>
+		{
+	addMember(<class:at.jku.kv.ple.Bank>, "void registerAccount(Account acc) {
+				
+			String accId = acc.getAccountId();
+			
+			if(customersList.containsKey(accId)) {
+				System.out.println(\"This account already exist, updating the information instead\");
+				saveAccountInformation(acc);
+			}
+			
+			if(acc.balance <= 0) {
+				System.out.println(\"You have to give an initial deposit to register\");
+			} else {
+				saveAccountInformation(acc);
+			}
+			
+			
+		}
+");
+	}
+	

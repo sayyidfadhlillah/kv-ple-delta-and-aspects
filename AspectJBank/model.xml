@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="AspectJBank">
+			<and mandatory="true" name="Bank">
+				<alt mandatory="true" name="RegistrationPolicy">
+					<feature name="NoPolicy"/>
+					<feature name="InitialDeposit"/>
+				</alt>
+			</and>
+			<and mandatory="true" name="Account">
+				<or name="FeeTransaction">
+					<feature name="Deposit"/>
+					<feature name="Withdrawal"/>
+					<feature name="Check"/>
+				</or>
+			</and>
+		</and>
+	</struct>
+</featureModel>

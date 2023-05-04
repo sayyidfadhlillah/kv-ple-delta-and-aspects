@@ -1,0 +1,13 @@
+ configuration delta "DAddPrint"
+	dialect <http://www.emftext.org/java>
+		requires <DExpPrint.decore>, <DAdd.decore>
+		modifies <at/jku/kv/ple/Add.java>
+		{
+	addMember(<class:at.jku.kv.ple.Add>, "public void print(){
+			left.print(); 
+			System.out.print('+'); 
+			right.print();
+		}
+");
+	}
+	

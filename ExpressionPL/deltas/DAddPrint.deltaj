@@ -1,0 +1,9 @@
+delta DAddPrint requires DExpPrint, DAdd {
+	modifies at.jku.kv.ple.Add {
+		adds public void print(){
+			left.print(); 
+			System.out.print('+'); 
+			right.print();
+		}
+	}
+}

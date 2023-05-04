@@ -1,0 +1,9 @@
+delta DAccountFees requires DAccount {
+
+	modifies at.jku.kv.ple.Account {
+	
+		adds Double fees = 100.0;
+		
+	}
+
+}

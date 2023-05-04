@@ -1,0 +1,20 @@
+ configuration delta "DWithdrawWithFee"
+	dialect <http://www.emftext.org/java>
+		requires <DAccountFees.decore>
+		modifies <at/jku/kv/ple/Account.java>
+		{
+	modifyStatementListContainer(<method:at.jku.kv.ple.Account.withdrawBalance(Double)>, "void withdrawBalance(Double reqBalance) {
+			
+			if(balance < fees){
+				System.out.println(\"Operation is cancelled. You need to have more balance than the fees. Current fee is \"+ String.valueOf(fees));
+			} else if (balance < (fees + reqBalance)) {
+				System.out.println(\"Operation is cancelled. You need to have more balance than the fees and withdrawal amount. Current fee is \"+ String.valueOf(fees));
+			} else {
+	withdrawBalance$DWithdrawWithFee(reqBalance);
+				balance -= fees;
+			}
+			
+			}
+", "DWithdrawWithFee", true);
+	}
+	

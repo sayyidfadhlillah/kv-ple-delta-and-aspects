@@ -1,0 +1,8 @@
+ configuration delta "DExpEval"
+	dialect <http://www.emftext.org/java>
+		modifies <../src/at/jku/kv/ple/Exp.java>
+		{
+	addMember(<interface:at.jku.kv.ple.Exp>, "public int eval();
+");
+	}
+	

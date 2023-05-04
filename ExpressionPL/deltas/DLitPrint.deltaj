@@ -1,0 +1,7 @@
+delta DLitPrint {
+	modifies at.jku.kv.ple.Lit {
+		adds public void print(){
+			System.out.print(value);
+		}
+	}
+}

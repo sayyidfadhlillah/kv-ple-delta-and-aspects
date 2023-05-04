@@ -1,0 +1,18 @@
+ configuration delta "DAdd"
+	dialect <http://www.emftext.org/java>
+		creates <at/jku/kv/ple/Add.java>
+		{
+	addClassifier(<resource:at/jku/kv/ple/Add.java>, "package at.jku.kv.ple;
+
+		public class Add implements Exp {
+			Exp left;
+			Exp right;
+		
+			public Add(Exp left, Exp right) {
+				this.left = left;
+				this.right = right;
+			}
+			
+		}");
+	}
+	

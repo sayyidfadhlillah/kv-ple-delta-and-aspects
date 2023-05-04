@@ -1,0 +1,20 @@
+Add:
+<decore/DAdd.decore>
+Add && Eval:
+<decore/DAddEval.decore>
+Add && Print:
+<decore/DAddPrint.decore>
+Print:
+<decore/DExpPrint.decore>
+Eval:
+<decore/DExpEval.decore>
+Lit && Print:
+<decore/DLitPrint.decore>
+Lit && Eval:
+<decore/DLitEval.decore>
+Neg:
+<decore/DNeg.decore>
+Neg && Eval:
+<decore/DNegEval.decore>
+Neg && Print:
+<decore/DNegPrint.decore>

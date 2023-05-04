@@ -1,0 +1,14 @@
+delta DNeg {
+	adds {
+		package at.jku.kv.ple;
+		
+		public class Neg{
+			
+			Exp exp;
+  			
+  			public Neg(Exp exp) { 
+  				this.exp = exp; 
+  			}
+		}
+	}
+}

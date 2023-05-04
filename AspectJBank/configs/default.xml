@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="AspectJBank"/>
+	<feature automatic="selected" name="Bank"/>
+	<feature automatic="selected" name="RegistrationPolicy"/>
+	<feature manual="selected" name="NoPolicy"/>
+	<feature automatic="unselected" name="InitialDeposit"/>
+	<feature automatic="selected" name="Account"/>
+	<feature name="FeeTransaction"/>
+	<feature name="Deposit"/>
+	<feature name="Withdrawal"/>
+	<feature name="Check"/>
+</configuration>

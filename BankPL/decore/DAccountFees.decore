@@ -1,0 +1,9 @@
+ configuration delta "DAccountFees"
+	dialect <http://www.emftext.org/java>
+		requires <DAccount.decore>
+		modifies <at/jku/kv/ple/Account.java>
+		{
+	addMember(<class:at.jku.kv.ple.Account>, "Double fees = 100.0;
+");
+	}
+	

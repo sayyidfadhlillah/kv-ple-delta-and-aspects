@@ -1,0 +1,7 @@
+delta DAddEval requires DExpEval, DAdd {
+	modifies at.jku.kv.ple.Add {
+		adds public int eval() { 
+			return left.eval() + right.eval(); 
+		}
+	}
+}

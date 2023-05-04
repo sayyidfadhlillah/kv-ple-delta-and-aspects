@@ -1,0 +1,21 @@
+ configuration delta "DCheckWithFee"
+	dialect <http://www.emftext.org/java>
+		requires <DAccountFees.decore>
+		modifies <at/jku/kv/ple/Account.java>
+		{
+	modifyStatementListContainer(<method:at.jku.kv.ple.Account.checkBalance()>, "void checkBalance() {
+			
+			if(balance <= fees){
+				System.out.println(\"Operation is cancelled. Your account does not have enough balance to pay the fee. Current fee is \"+ String.valueOf(fees));
+			} else {
+				balance -= fees;
+				System.out.println(\"Your balance is: \" + String.valueOf(this.balance));
+			}
+			}
+", "DCheckWithFee", false);
+	modifyStatementListContainer(<method:at.jku.kv.ple.Account.getBalance()>, "Double getBalance() {
+			return balance;
+			}
+", "DCheckWithFee", false);
+	}
+	

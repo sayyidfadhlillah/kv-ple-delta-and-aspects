@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ASCII"?>
+<feature:DEFeatureModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:feature="http://deltaecore.org/feature/1.0">
+  <rootFeature minCardinality="1" maxCardinality="1" name="EPL">
+    <groups minCardinality="2" maxCardinality="2">
+      <features minCardinality="1" maxCardinality="1" name="Operation">
+        <groups minCardinality="1" maxCardinality="2">
+          <features minCardinality="1" maxCardinality="1" name="Print"/>
+          <features maxCardinality="1" name="Eval"/>
+        </groups>
+      </features>
+      <features minCardinality="1" maxCardinality="1" name="DataType">
+        <groups minCardinality="1" maxCardinality="3">
+          <features minCardinality="1" maxCardinality="1" name="Lit"/>
+          <features maxCardinality="1" name="Neg"/>
+          <features maxCardinality="1" name="Add"/>
+        </groups>
+      </features>
+    </groups>
+  </rootFeature>
+</feature:DEFeatureModel>

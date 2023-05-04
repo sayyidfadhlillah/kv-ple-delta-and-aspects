@@ -1,0 +1,10 @@
+delta DNegPrint requires DNeg, DExpPrint {
+	modifies at.jku.kv.ple.Neg {
+		
+		adds public void print() {
+			System.out.print("-(");
+			exp.print();
+			System.out.print(")");
+		}
+	}
+}

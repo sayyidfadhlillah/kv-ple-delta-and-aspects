@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<feature:DEFeatureModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:feature="http://deltaecore.org/feature/1.0">
+  <rootFeature minCardinality="1" maxCardinality="1" name="BankAccount">
+    <groups minCardinality="2" maxCardinality="2">
+      <features minCardinality="1" maxCardinality="1" name="Bank">
+        <groups minCardinality="1" maxCardinality="1">
+          <features minCardinality="1" maxCardinality="1" name="AccRegistrationPolicy">
+            <groups minCardinality="1" maxCardinality="1">
+              <features maxCardinality="1" name="NoRequirement"/>
+              <features maxCardinality="1" name="WithDeposit"/>
+            </groups>
+          </features>
+        </groups>
+      </features>
+      <features minCardinality="1" maxCardinality="1" name="Account">
+        <groups maxCardinality="1">
+          <features maxCardinality="1" name="TransactionWithFee">
+            <groups minCardinality="1" maxCardinality="3">
+              <features maxCardinality="1" name="Deposit"/>
+              <features maxCardinality="1" name="Withdrawal"/>
+              <features maxCardinality="1" name="CheckBalance"/>
+            </groups>
+          </features>
+        </groups>
+      </features>
+    </groups>
+  </rootFeature>
+</feature:DEFeatureModel>

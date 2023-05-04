@@ -1,0 +1,13 @@
+ configuration delta "DNegPrint"
+	dialect <http://www.emftext.org/java>
+		requires <DNeg.decore>, <DExpPrint.decore>
+		modifies <at/jku/kv/ple/Neg.java>
+		{
+	addMember(<class:at.jku.kv.ple.Neg>, "public void print() {
+			System.out.print(\"-(\");
+			exp.print();
+			System.out.print(\")\");
+		}
+");
+	}
+	

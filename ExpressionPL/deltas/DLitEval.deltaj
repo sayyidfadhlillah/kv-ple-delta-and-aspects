@@ -1,0 +1,8 @@
+delta DLitEval {
+	modifies at.jku.kv.ple.Lit {
+		adds public int eval(){
+			return value;
+		}
+	}
+}
+

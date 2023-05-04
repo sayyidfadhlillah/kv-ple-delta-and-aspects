@@ -1,0 +1,16 @@
+Bank:
+<decore/DNewBank.decore>
+Account:
+<decore/DAccount.decore>
+NoRequirement:
+<decore/DNoReqReg.decore>
+WithDeposit:
+<decore/DRegWithDep.decore>
+TransactionWithFee:
+<decore/DAccountFees.decore>
+Deposit:
+<decore/DDepositWithFee.decore>
+Withdrawal:
+<decore/DWithdrawWithFee.decore>
+CheckBalance:
+<decore/DCheckWithFee.decore>

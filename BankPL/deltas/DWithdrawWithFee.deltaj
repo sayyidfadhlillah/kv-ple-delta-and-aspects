@@ -1,0 +1,17 @@
+delta DWithdrawWithFee requires DAccountFees {
+
+	modifies at.jku.kv.ple.Account {
+	
+		modifies withdrawBalance(Double reqBalance) {
+			
+			if(balance < fees){
+				System.out.println("Operation is cancelled. You need to have more balance than the fees. Current fee is "+ String.valueOf(fees));
+			} else if (balance < (fees + reqBalance)) {
+				System.out.println("Operation is cancelled. You need to have more balance than the fees and withdrawal amount. Current fee is "+ String.valueOf(fees));
+			} else {
+				original(reqBalance);
+				balance -= fees;
+			}
+		}
+	}
+}

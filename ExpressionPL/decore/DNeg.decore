@@ -1,0 +1,16 @@
+ configuration delta "DNeg"
+	dialect <http://www.emftext.org/java>
+		creates <at/jku/kv/ple/Neg.java>
+		{
+	addClassifier(<resource:at/jku/kv/ple/Neg.java>, "package at.jku.kv.ple;
+		
+		public class Neg{
+			
+			Exp exp;
+  			
+  			public Neg(Exp exp) { 
+  				this.exp = exp; 
+  			}
+		}");
+	}
+	

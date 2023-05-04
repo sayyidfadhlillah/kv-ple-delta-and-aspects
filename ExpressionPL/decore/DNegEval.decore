@@ -1,0 +1,11 @@
+ configuration delta "DNegEval"
+	dialect <http://www.emftext.org/java>
+		requires <DNeg.decore>, <DExpEval.decore>
+		modifies <at/jku/kv/ple/Neg.java>
+		{
+	addMember(<class:at.jku.kv.ple.Neg>, "public int eval(){
+			return - exp.eval();
+		}
+");
+	}
+	
